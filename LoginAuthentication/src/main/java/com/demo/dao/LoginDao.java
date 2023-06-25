@@ -7,6 +7,8 @@ public interface LoginDao {
 
 	MyUser authenticateUser(String uname, String passwd);
 
-	int registerUser(RegisterUser ru, MyUser mu);
+	
+
+	int registerUser(RegisterUser ob, MyUser u);
 
 }

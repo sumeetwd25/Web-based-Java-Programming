@@ -6,7 +6,5 @@ import com.demo.beans.RegisterUser;
 public interface LoginService {
 
 	MyUser validateUser(String uname, String passwd);
-
-	int addRegisterUser(RegisterUser ru, MyUser mu);
-		
+	int addRegisterUser(RegisterUser r,MyUser u);
 }

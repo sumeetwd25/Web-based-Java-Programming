@@ -7,29 +7,26 @@ public class RegisterUser {
 	private int uid;
 	private String name;
 	private String addr;
-	private String uname;
-	private String[] skills;
 	private String gender;
-	private LocalDate dt;
+	private String[] skills;
+	private  LocalDate dt;
 	private String city;
-	
+	private String uname;
 	public RegisterUser() {
 		super();
 	}
-	
-	public RegisterUser(int uid, String name, String addr, String uname, String[] skills, String gender, LocalDate dt,
-			String city) {
+	public RegisterUser(int uid, String name, String addr, String gender, String[] skills, LocalDate dt, String city,
+			String uname) {
 		super();
 		this.uid = uid;
 		this.name = name;
 		this.addr = addr;
-		this.uname = uname;
-		this.skills = skills;
 		this.gender = gender;
+		this.skills = skills;
 		this.dt = dt;
 		this.city = city;
+		this.uname = uname;
 	}
-	
 	public int getUid() {
 		return uid;
 	}
@@ -48,11 +45,11 @@ public class RegisterUser {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-	public String getUname() {
-		return uname;
+	public String getGender() {
+		return gender;
 	}
-	public void setUname(String uname) {
-		this.uname = uname;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	public String[] getSkills() {
 		return skills;
@@ -60,12 +57,7 @@ public class RegisterUser {
 	public void setSkills(String[] skills) {
 		this.skills = skills;
 	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+	
 	public LocalDate getDt() {
 		return dt;
 	}
@@ -78,11 +70,17 @@ public class RegisterUser {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
 	@Override
 	public String toString() {
-		return "RegisterUser [uid=" + uid + ", name=" + name + ", addr=" + addr + ", uname=" + uname + ", skills="
-				+ Arrays.toString(skills) + ", gender=" + gender + ", dt=" + dt + ", city=" + city + "]";
+		return "RegisterUser [uid=" + uid + ", name=" + name + ", addr=" + addr + ", gender=" + gender + ", skills="
+				+ Arrays.toString(skills) + ", dt=" + dt + ", city=" + city + ", uname=" + uname + "]";
 	}
 	
+
 }
