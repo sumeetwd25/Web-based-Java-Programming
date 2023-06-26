@@ -10,30 +10,30 @@
 	<%--This is a declarative code which will be added outside the doGet in servlet --%>
 
 	<%!
-public int factorial(int num){
-	int f=1;
-	for(int i=1;i<=num;i++){
-		f=f*i;
-	}
-	return f;
-}
-%>
+		public int factorial(int num){
+			int f=1;
+			for(int i=1;i<=num;i++){
+			f=f*i;
+			}
+		return f;
+		}
+	%>
 
 	Date:
 	<%out.println(new Date()); %>
 
 	<%
-int n1 = Integer.parseInt(request.getParameter("n1"));
-String btn = request.getParameter("btn");
-switch(btn){
-case "add":
-	int n2 = Integer.parseInt(request.getParameter("n2"));
-	 out.println("Addition : "+(n1+n2));
-	 break;
- case "factorial":
-	 int ans=factorial(n1);
-	 out.println("Factorial : "+ans);
-}
-%>
+		int n1 = Integer.parseInt(request.getParameter("n1"));
+		String btn = request.getParameter("btn");
+		switch(btn){
+		case "add":
+			int n2 = Integer.parseInt(request.getParameter("n2"));
+	 		out.println("Addition : "+(n1+n2));
+	 		break;
+ 		case "factorial":
+	 		int ans=factorial(n1);
+	 		out.println("Factorial : "+ans);
+		}
+	%>
 </body>
 </html>
