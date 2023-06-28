@@ -1,10 +1,23 @@
 package com.demo.beans;
 
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="prod12")
 public class Product {
+	@Id
 	private int pid;
 	private String pname;
+	@Embedded
 	private Warehouse whouse;
 	
+	public Product() {
+		super();
+	}
+
 	public Product(int pid, String pname, Warehouse whouse) {
 		super();
 		this.pid = pid;
