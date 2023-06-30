@@ -1,0 +1,24 @@
+mysql> select * from emp12;
++------+---------+-----+
+| dept | desg    | pid |
++------+---------+-----+
+| HR   | manager |  12 |
++------+---------+-----+
+1 row in set (0.00 sec)
+
+mysql> select * from stud12;
++--------+-------+-----+
+| course | marks | pid |
++--------+-------+-----+
+| DBDA   |    78 |  13 |
++--------+-------+-----+
+1 row in set (0.00 sec)
+
+mysql> select * from person11;
++-----+---------+-------+
+| pid | address | pname |
++-----+---------+-------+
+|  12 | pune    | Rajat |
+|  13 | mumbai  | Swati |
++-----+---------+-------+
+2 rows in set (0.00 sec)

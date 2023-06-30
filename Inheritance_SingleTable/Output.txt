@@ -1,0 +1,8 @@
+mysql> select * from person11;
++----------+-----+---------+-------+--------+-------+------+---------+
+| ptype    | pid | address | pname | course | marks | dept | desg    |
++----------+-----+---------+-------+--------+-------+------+---------+
+| employee |  12 | pune    | Rajat | NULL   |  NULL | HR   | manager |
+| student  |  13 | mumbai  | Swati | DBDA   |    78 | NULL | NULL    |
++----------+-----+---------+-------+--------+-------+------+---------+
+2 rows in set (0.00 sec)
