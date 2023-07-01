@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+						http://www.springframework.org/schema/beans ./spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+
+	<bean id="u1" class="com.demo.beans.MyUser" autowire="constructor">
+		<constructor-arg name="pid" value="117"></constructor-arg>
+		<constructor-arg name="pname" value="Master Chief"></constructor-arg>
+	</bean>
+
+	<bean id="a1" class="com.demo.beans.Address">
+		<constructor-arg name="aid" value="343"></constructor-arg>
+		<constructor-arg name="street" value="Pillers of Autumn"></constructor-arg>
+	</bean>
+
+	<bean id="p1" class="com.demo.beans.Player">
+		<property name="pid" value="202"></property>
+		<property name="pname" value="Dhoni"></property>
+	</bean>
+
+	<bean id="p2" class="com.demo.beans.Player">
+		<property name="pid" value="303"></property>
+		<property name="pname" value="Virat"></property>
+	</bean>
+
+	<bean id="p3" class="com.demo.beans.Player">
+		<property name="pid" value="404"></property>
+		<property name="pname" value="Ashwin"></property>
+	</bean>
+
+	<bean id="t1" class="com.demo.beans.Team">
+		<property name="tid" value="01"></property>
+		<property name="tname" value="Mumbai"></property>
+		<property name="plist">
+			<list>
+				<ref bean="p1" />
+				<ref bean="p2" />
+				<ref bean="p3" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

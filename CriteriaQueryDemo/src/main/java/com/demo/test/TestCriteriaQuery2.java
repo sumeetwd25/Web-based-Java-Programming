@@ -2,7 +2,12 @@ package com.demo.test;
 
 import java.util.List;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -30,6 +35,24 @@ public class TestCriteriaQuery2 {
 		cr3.add(expr);
 		List<Product> plist2 = cr3.list();
 		plist2.forEach(System.out::println);
+
+		cr3.setFirstResult(0);
+		cr3.setMaxResults(1);
+		plist2 = cr3.list();
+		plist2.forEach(System.out::println);
+
+		System.out.println("Using JPQL");
+		CriteriaBuilder cb = sess.getCriteriaBuilder();
+
+		CriteriaQuery<Product> cr22 = cb.createQuery(Product.class);
+		Root<Product> root = cr22.from(Product.class);
+		Query q = sess.createQuery(cr22.select(root));
+		plist2 = q.getResultList();
+		plist2.forEach(System.out::println);
+		
+		tr.commit();
+		sess.close();
+		sf.close();
 	}
 
 }
