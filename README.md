@@ -11,3 +11,8 @@ Other codes:
 In other codes where to see 'dac41' and 'welcome', they are username and password of mysql.
 You can use replace them with username & password of your mysql.
 And my database name is dac41 too, so, you have to replace it with your database name.
+
+REST Web Apps:
+Append 'products' in url to see the output.
+You can also pass the parameter in the url. eg./products/2
+Use POSTMAN software to perform CRUD operations.
