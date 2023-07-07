@@ -1,0 +1,6 @@
+delimiter //
+create procedure getnumproducts(out cnt int)
+begin
+select count(*) into cnt
+from product1;
+end//

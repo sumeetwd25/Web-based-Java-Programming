@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.SpringBootRESTWebService.SpringBootRestWebServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 15.459 s <<< FAILURE! - in com.demo.SpringBootRESTWebService.SpringBootRestWebServiceApplicationTests
+contextLoads  Time elapsed: 0.072 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productController' method 
+com.demo.SpringBootRESTWebService.controller.ProductController#displayById(int)
+to {GET [/products/{pid}]}: There is already 'productController' bean method
+com.demo.SpringBootRESTWebService.controller.ProductController#deleteProduct(int) mapped.
+Caused by: java.lang.IllegalStateException: 
+Ambiguous mapping. Cannot map 'productController' method 
+com.demo.SpringBootRESTWebService.controller.ProductController#displayById(int)
+to {GET [/products/{pid}]}: There is already 'productController' bean method
+com.demo.SpringBootRESTWebService.controller.ProductController#deleteProduct(int) mapped.
+
