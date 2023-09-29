@@ -1,0 +1,7 @@
+com\demo\entity\ImageData$ImageDataBuilder.class
+com\demo\entity\ImageData.class
+com\demo\controller\StorageController.class
+com\demo\util\ImageUtils.class
+com\demo\service\StorageService.class
+com\demo\StorageServiceApplication.class
+com\demo\respository\StorageRepository.class
